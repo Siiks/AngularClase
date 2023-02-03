@@ -1,1 +1,1 @@
-<p *ngFor = "let libro of libros">{{libro.id}} <a  (click)="showAutor(libro)" href="#">{{libro.titulo}}</a></p>
+<p *ngFor = "let libro of libros"><a [routerLink]="['/informacion', libro.id]">{{libro.titulo}}</a></p>

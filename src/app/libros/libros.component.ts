@@ -10,9 +10,9 @@ export class LibrosComponent {
   link: string = "https://www.google.com/search?q=";
   constructor(){
     this.libros = [
-      {id:1, titulo: 'hola', autor: 'aksjd'},
-      {id:2, titulo: 'asdsadas', autor: 'asdasdsa'},
-      {id:3, titulo: 'adios', autor: 'njhgsdf'}
+      {id: '1', titulo: 'La bestia', autor: 'Carmen Mola'},
+      {id: '2', titulo: 'La ola', autor: 'Carmen'},
+      {id: '3', titulo: 'La puerta', autor: 'Mola'}
     ]
   }
   showAutor(libro: any) {
