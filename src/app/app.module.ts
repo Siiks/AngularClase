@@ -9,13 +9,16 @@ import { FirmaComponent } from './firma/firma.component';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { LibrosComponent } from './libros/libros.component';
-import { ServiciosComponent } from './servicios/servicios.component';
 import { RouterModule, Routes } from '@angular/router';
 import { CabeceraComponent } from './cabecera/cabecera.component';
 import { InformacionComponent } from './informacion/informacion.component';
 import { CdsComponent } from './cds/cds.component';
 import { InformacionCdsComponent } from './informacion-cds/informacion-cds.component';
-
+import { LibroclickedService } from './libroclicked.service';
+import { HttpClientModule } from '@angular/common/http';
+import { NgxSpinnerModule } from 'ngx-spinner';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 const rutas:Routes = [
   {path:'listado-libros', component: LibrosComponent},
@@ -32,7 +35,6 @@ const rutas:Routes = [
     FirmaComponent,
     CabeceraComponent,
     LibrosComponent,
-    ServiciosComponent,
     CabeceraComponent,
     InformacionComponent,
     CdsComponent,
@@ -43,12 +45,19 @@ const rutas:Routes = [
     AppRoutingModule,
     FormsModule,
     CommonModule,
-    RouterModule.forRoot(rutas)
+    RouterModule.forRoot(rutas),
+    HttpClientModule,
+    NgxSpinnerModule,
+    BrowserAnimationsModule,
   ],
   exports:[
-    RouterModule
+    RouterModule,
+    
   ],
-  providers: [],
+  providers: [
+    LibroclickedService
+  ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent]
 })
 

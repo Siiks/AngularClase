@@ -1,1 +1,5 @@
-<p *ngFor = "let libro of libros"><a [routerLink]="['/informacion', libro.id]">{{libro.titulo}}</a></p>
+<ngx-spinner type="ball-beat" >Me cargo</ngx-spinner>
+<p *ngFor = "let libro of libros">
+    <a [routerLink]="['/informacion', libro.id]" (click)="agregarLibros(libro)">{{libro.titulo}}</a>
+</p>
+<p *ngIf="errorHttp">Error no carga la lista</p>
