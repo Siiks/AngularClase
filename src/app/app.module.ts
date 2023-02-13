@@ -19,6 +19,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { RenderEjemploComponent } from './render-ejemplo/render-ejemplo.component';
 
 const rutas:Routes = [
   {path:'listado-libros', component: LibrosComponent},
@@ -39,6 +40,7 @@ const rutas:Routes = [
     InformacionComponent,
     CdsComponent,
     InformacionCdsComponent,
+    RenderEjemploComponent,
   ],
   imports: [
     BrowserModule,
